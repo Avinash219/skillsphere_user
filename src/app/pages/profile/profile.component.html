@@ -1,0 +1,49 @@
+<div class="profile-container">
+  <h2>👤 My Profile</h2>
+
+  <mat-card class="section-card">
+    <mat-card-title>📝 Personal Information</mat-card-title>
+    <mat-card-content>
+      <mat-form-field appearance="fill">
+        <mat-label>Full Name</mat-label>
+        <input matInput formControlName="fullName" />
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Email</mat-label>
+        <input matInput type="email" formControlName="email" />
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" (click)="updateProfile()">
+        Save Changes
+      </button>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card class="section-card">
+    <mat-card-title>📁 Projects</mat-card-title>
+    <mat-card-content>
+      <ul>
+        <li *ngFor="let project of projects">{{ project.name }}</li>
+      </ul>
+      <button mat-stroked-button color="accent" (click)="addProject()">+ Add Project</button>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card class="section-card">
+    <mat-card-title>📄 Resume</mat-card-title>
+    <mat-card-content>
+      <input type="file" (change)="uploadResume($event)" />
+      <p *ngIf="resumeName">Uploaded: {{ resumeName }}</p>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card class="section-card">
+    <mat-card-title>🐙 GitHub Integration</mat-card-title>
+    <mat-card-content>
+      <button mat-button color="primary" (click)="connectGitHub()">
+        Connect GitHub Account
+      </button>
+    </mat-card-content>
+  </mat-card>
+</div>
