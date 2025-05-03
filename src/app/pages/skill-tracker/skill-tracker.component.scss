@@ -1,0 +1,27 @@
+.skill-tracker-container {
+  padding: 32px;
+
+  h2 {
+    margin-bottom: 24px;
+  }
+
+  .section-card {
+    margin-bottom: 32px;
+    padding: 16px;
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+
+      li {
+        margin-bottom: 16px;
+      }
+    }
+
+    mat-progress-bar {
+      margin-top: 6px;
+      height: 8px;
+      border-radius: 4px;
+    }
+  }
+}

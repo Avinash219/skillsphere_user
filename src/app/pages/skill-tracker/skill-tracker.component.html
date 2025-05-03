@@ -1,0 +1,35 @@
+<div class="skill-tracker-container">
+  <h2>📊 Skill Tracker</h2>
+
+  <!-- Progress Overview -->
+  <mat-card class="section-card">
+    <mat-card-title>🔄 Your Progress</mat-card-title>
+    <mat-card-content>
+      <p>You’ve completed <strong>65%</strong> of your current learning plan.</p>
+      <mat-progress-bar mode="determinate" [value]="65"></mat-progress-bar>
+    </mat-card-content>
+  </mat-card>
+
+  <!-- Current Goals -->
+  <mat-card class="section-card">
+    <mat-card-title>🎯 Current Goals</mat-card-title>
+    <mat-card-content>
+      <ul>
+        <li *ngFor="let goal of skillGoals">
+          {{ goal.title }} — {{ goal.progress }}%
+          <mat-progress-bar mode="determinate" [value]="goal.progress"></mat-progress-bar>
+        </li>
+      </ul>
+      <button mat-stroked-button color="primary" (click)="addGoal()">+ Add Goal</button>
+    </mat-card-content>
+  </mat-card>
+
+  <!-- Weekly Activity Summary -->
+  <mat-card class="section-card">
+    <mat-card-title>📅 Weekly Activity</mat-card-title>
+    <mat-card-content>
+      <p>You studied for <strong>12 hours</strong> this week.</p>
+      <p>Great consistency! Keep going 💪</p>
+    </mat-card-content>
+  </mat-card>
+</div>

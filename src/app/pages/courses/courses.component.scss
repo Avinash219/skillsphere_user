@@ -1,0 +1,22 @@
+.courses-container {
+  padding: 32px;
+
+  h2 {
+    margin-bottom: 24px;
+  }
+
+  .course-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+
+  .course-card {
+    width: 320px;
+    min-height: 200px;
+
+    mat-progress-bar {
+      margin-top: 8px;
+    }
+  }
+}
